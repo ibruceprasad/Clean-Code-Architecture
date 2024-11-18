@@ -6,3 +6,10 @@ backend/Library.Service/bin
 backend/Library.Service/obj
 backend/Library.Api/bin
 backend/Library.Api/obj
+tests/Library.Api.Services.UnitTest/obj
+tests/Library.Api.Services.UnitTest/bin
+tests/Library.Api.Repository.UnitTest/obj
+tests/Library.Api.Repository.UnitTest/bin
+tests/Library.Api.Integration.Test/obj
+tests/Library.Api.Integration.Test/bin
+
