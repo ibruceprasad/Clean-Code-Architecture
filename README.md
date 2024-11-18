@@ -34,5 +34,5 @@
 * sqllite database <br>
 * xUnit mock tests <br>
 * xUnit integration tests<br>
-* MSSQL backend running in a Docker container <br>
+* MSSQL containerized in Docker for integration test suites <br>
 * xUnit test results and coverage using coverlet
