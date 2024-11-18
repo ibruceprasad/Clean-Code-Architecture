@@ -1,7 +1,7 @@
 # librarymanagement
 
 ### <ins>About</ins>
-###### This is a Web API project demonstrating Clean Code Architecture for CRUD functionality within a library management system for managing books.
+This Web API project demonstrates Clean Code Architecture, implementing CRUD functionality for book entities within a library management system.
 
 
 
