@@ -32,7 +32,7 @@ This Web API project demonstrates Clean Code Architecture, implementing CRUD fun
 * Generic repository layer for CURD operation of entities<br>
 * Entity Framework Core <br> 
 * sqllite database <br>
-* xUnit mock tests <br>
+* xUnit mock tests for service layer and repository layer <br>
 * xUnit integration tests<br>
-* MSSQL containerized in Docker for integration test suites <br>
+* Integration test suite spin off MSSQL Docker container<br>
 * xUnit test results and coverage using coverlet
