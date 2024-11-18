@@ -4,3 +4,5 @@ backend/Library.Repository/bin
 backend/Library.Repository/obj
 backend/Library.Service/bin
 backend/Library.Service/obj
+backend/Library.Api/bin
+backend/Library.Api/obj
