@@ -1,2 +1,6 @@
 backend/Library.Domain/bin
 backend/Library.Domain/obj
+backend/Library.Repository/bin
+backend/Library.Repository/obj
+backend/Library.Service/bin
+backend/Library.Service/obj
