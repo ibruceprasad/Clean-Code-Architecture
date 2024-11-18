@@ -1,0 +1,33 @@
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\appsettings.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\library - api.exe
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\library - api.deps.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\library - api.runtimeconfig.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\library - api.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\library - api.pdb
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.csproj.AssemblyReference.cache
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.AssemblyInfoInputs.cache
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.AssemblyInfo.cs
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.csproj.CoreCompileInputs.cache
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets\msbuild.library - api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets\msbuild.build.library - api.props
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.library - api.props
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.library - api.props
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\scopedcss\bundle\library - api.styles.css
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.csproj.CopyComplete
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\refint\library - api.dll
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.pdb
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\library - api.genruntimeconfig.cache
+C:\Users\prasa\1Bruce\Projects\My Projects 2024\Library Project\library - api\obj\Debug\net8.0\ref\library - api.dll
