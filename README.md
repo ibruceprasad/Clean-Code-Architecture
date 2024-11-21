@@ -10,7 +10,7 @@ This Web API project demonstrates Clean Code Architecture, implementing CRUD fun
 
 ├── backend/<br>
 │   ├──Library.Api/ #------------------*Main API project*<br>
-│   ├── Library.Service/ #---------------*Core business layer*<br>
+│   ├── Library.Service/ #---------------*Core service(business) layer*<br>
 │   ├── Library.Reportory/ #-------------*The data access and infrastructure layer*<br>
 │   ├── Library.Domain/ #----------------*The data models*<br>
 <br><br>
@@ -30,6 +30,7 @@ This Web API project demonstrates Clean Code Architecture, implementing CRUD fun
 * Global Exception handler middleware <br>
 * Dependecy registration and injuction for service layer and repository layer <br>
 * Generic repository layer for CURD operation of entities<br>
+* Generic Result pattern(class -ServiceResult) in service layer to return results <br> 
 * Entity Framework Core <br> 
 * sqllite database <br>
 * xUnit mock tests for service layer and repository layer <br>
