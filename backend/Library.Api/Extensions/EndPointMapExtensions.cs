@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using library.Services.Domain.Dtos;
 using library.services.Services;
-using library___api.Models;
 using System.Net;
 using Asp.Versioning.Conventions;
 
@@ -26,7 +25,7 @@ namespace library___api.Extensions
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK, typeof(List<BookDto>))
-            .Produces(StatusCodes.Status500InternalServerError, typeof(ErrorResponseMessage));
+            .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
             
 
             app.MapGet("v{version:apiVersion}/book/{id}", async (int id, IBookServices bookServices) =>
@@ -34,14 +33,14 @@ namespace library___api.Extensions
                 var bookDto = await bookServices.GetBookByIdAsync(id);
 
                 return bookDto == null ?
-                    Results.NotFound(new ErrorResponseMessage() { ErrorMessage = $"Book id: {id} not found " }) :
+                    Results.NotFound(new ProblemDetails() { Detail = $"Book id: {id} not found ", Status = StatusCodes.Status404NotFound }) :
                     Results.Ok(bookDto);
             })
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK, typeof(BookDto))
-            .Produces(StatusCodes.Status404NotFound, typeof(ErrorResponseMessage))
-            .Produces(StatusCodes.Status500InternalServerError, typeof(ErrorResponseMessage));
+            .Produces(StatusCodes.Status404NotFound, typeof(ProblemDetails))
+            .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
             
 
 
@@ -51,17 +50,17 @@ namespace library___api.Extensions
                 var result = await bookServices.AddBookAsync(bookDto);
                 if (result.IsSuccess)
                     return Results.Ok(result.Data);
-                return Results.BadRequest(new ErrorResponseMessage() { ErrorMessage = result.ErrorMessage }); ;
+                return Results.BadRequest(new ProblemDetails() { Detail = result.ErrorMessage, Status = StatusCodes.Status400BadRequest }); ;
             })
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK, typeof(BookDto))
-            .Produces(StatusCodes.Status400BadRequest, typeof(ErrorResponseMessage))
-            .Produces(StatusCodes.Status500InternalServerError, typeof(ErrorResponseMessage));
+            .Produces(StatusCodes.Status400BadRequest, typeof(ProblemDetails))
+            .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
 
 
 
-            app.MapPut("v{version:apiVersion}/book", async ([FromQuery] int id,
+            app.MapPut("v{version:apiVersion}/book/{id}", async ( int id,
                                                    [FromBody] BookDto bookDto,
                                                    IBookServices bookServices) =>
             {
@@ -73,19 +72,19 @@ namespace library___api.Extensions
                 switch (result.Status)
                 {
                     case HttpStatusCode.BadRequest:
-                        return Results.BadRequest(new ErrorResponseMessage() { ErrorMessage = result.ErrorMessage });
+                        return Results.BadRequest(new ProblemDetails() { Detail = result.ErrorMessage, Status = StatusCodes.Status400BadRequest });
                     case HttpStatusCode.NotFound:
-                        return Results.NotFound(new ErrorResponseMessage() { ErrorMessage = result.ErrorMessage });
+                        return Results.NotFound(new ProblemDetails() { Detail = result.ErrorMessage, Status = StatusCodes.Status404NotFound });
                     default:
-                        return Results.Problem(statusCode: 500, title: "Unknown Internal Server Error");
+                        return Results.Problem(new ProblemDetails() { Status = StatusCodes.Status500InternalServerError, Detail = "Unknown Internal Server Error" });
                 }
             })
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK, typeof(BookDto))
-            .Produces(StatusCodes.Status400BadRequest, typeof(ErrorResponseMessage))
-            .Produces(StatusCodes.Status404NotFound, typeof(ErrorResponseMessage))
-            .Produces(StatusCodes.Status500InternalServerError, typeof(ErrorResponseMessage));
+            .Produces(StatusCodes.Status400BadRequest, typeof(ProblemDetails))
+            .Produces(StatusCodes.Status404NotFound, typeof(ProblemDetails))
+            .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
 
 
 
@@ -95,13 +94,13 @@ namespace library___api.Extensions
                 var result = await bookServices.DeleteBookAsync(id);
                 if (result.IsSuccess)
                     return Results.Ok();
-                return Results.BadRequest(new ErrorResponseMessage());
+                return Results.BadRequest(new ProblemDetails() { Detail = result.ErrorMessage , Status = StatusCodes.Status400BadRequest});
             })
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK)
-            .Produces(StatusCodes.Status404NotFound, typeof(ErrorResponseMessage))
-            .Produces(StatusCodes.Status500InternalServerError, typeof(ErrorResponseMessage));
+            .Produces(StatusCodes.Status404NotFound, typeof(ProblemDetails))
+            .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
 
 
             return app;
