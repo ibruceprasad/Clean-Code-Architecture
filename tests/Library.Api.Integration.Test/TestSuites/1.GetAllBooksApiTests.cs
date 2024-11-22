@@ -10,6 +10,7 @@ namespace Library.Api.Integration.Test.IntegrationTests
     public class GetAllBooksApiTest  // : IClassFixture<WebApplicationFactory<IApiMarker>>
     {
         private readonly HttpClient _httpClient;
+        private const string version = "v1";
         public GetAllBooksApiTest(CustomWebApplicationFactory appFactory)
         {
             _httpClient = appFactory.CreateClient();
@@ -19,7 +20,7 @@ namespace Library.Api.Integration.Test.IntegrationTests
         public async Task GetAll_ReturnAllBooks_WhenNoArguments()
         {
             // Act
-            HttpResponseMessage response = await _httpClient.GetAsync("/books");
+            HttpResponseMessage response = await _httpClient.GetAsync($"{version}/books");
 
             // Assert ( Book id #1 and #2 are inserted by database migrations)
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.OK);

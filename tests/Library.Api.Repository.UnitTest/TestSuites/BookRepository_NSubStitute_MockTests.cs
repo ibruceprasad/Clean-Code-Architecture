@@ -33,7 +33,7 @@ namespace Library.Api.Unit.Test.TestSuites
 
 
         [Fact]
-        public async void GetAllAsync_ReturnsAllBooks()
+        public async Task GetAllAsync_ReturnsAllBooks()
         {
             //Arrange
             var books = new List<Book>()
@@ -52,7 +52,7 @@ namespace Library.Api.Unit.Test.TestSuites
 
 
         [Fact]
-        public async void GetByIdAsync_ReturnsBookDetails_GivenBookId()
+        public async Task GetByIdAsync_ReturnsBookDetails_GivenBookId()
         {
 
 
@@ -70,7 +70,7 @@ namespace Library.Api.Unit.Test.TestSuites
         }
 
         [Fact]
-        public async void AddAsync_ReturnsAddedBookDetail_GivenNewBookDetail()
+        public async Task AddAsync_ReturnsAddedBookDetail_GivenNewBookDetail()
         {
             //Arrange
             var books = new List<Book>() {
@@ -91,7 +91,7 @@ namespace Library.Api.Unit.Test.TestSuites
 
 
         [Fact]
-        public async void AddAsync_ReturnsApplicationException_WhenFailedToSave()
+        public async Task AddAsync_ReturnsApplicationException_WhenFailedToSave()
         {
             //Arrange
             var books = new List<Book>() {
@@ -104,13 +104,13 @@ namespace Library.Api.Unit.Test.TestSuites
             var configureSaveChanges = _mockLibraryDbContext.SaveChangesAsync().Returns(0);
 
             // Act + Assert
-            Assert.ThrowsAsync<DivideByZeroException>(async () => await _bookRepository.AddAsync(newBook));
+             await Assert.ThrowsAsync<ApplicationException>(async () => await _bookRepository.AddAsync(newBook));
         }
 
 
 
         [Fact]
-        public async void UpdateAsync_ReturnsUpdatedBookDetail_GivenExistingBookDetail()
+        public async Task UpdateAsync_ReturnsUpdatedBookDetail_GivenExistingBookDetail()
         {
 
             // Note: Mocking of the Entry(entity) management is difficut using NSubStitute or Moq, hence go for inmemort test ???

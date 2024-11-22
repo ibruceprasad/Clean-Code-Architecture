@@ -36,7 +36,7 @@ namespace Library.Api.Unit.Test.TestSuites
         }
 
         [Fact]
-        public async void Check_IfDatabaseCreated()
+        public async Task Check_IfDatabaseCreated()
         {
             sqliteInMemoryDbContext.Database.IsSqlite().Should().BeTrue();
             sqliteInMemoryDbContext.Database.CanConnect().Should().BeTrue();
@@ -45,7 +45,7 @@ namespace Library.Api.Unit.Test.TestSuites
 
   
         [Fact]
-        public async void GetAllAsync_ReturnsAllBooks()
+        public async Task GetAllAsync_ReturnsAllBooks()
         {
             //Act
             var existingBooks = await _bookRepository.GetAllAsync();

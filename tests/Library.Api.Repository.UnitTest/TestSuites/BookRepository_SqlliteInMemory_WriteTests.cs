@@ -32,7 +32,7 @@ namespace Library.Api.Unit.Test.TestSuites
         }
 
         [Fact]
-        public async void UpdateAsync_ReturnsUpdatedBookDetail_GivenExistingBookDetail()
+        public async Task UpdateAsync_ReturnsUpdatedBookDetail_GivenExistingBookDetail()
         {
             var allBooks = await _bookRepository.GetAllAsync();
             //Arrange
@@ -47,7 +47,7 @@ namespace Library.Api.Unit.Test.TestSuites
         }
                
         [Fact]
-        public async void AddAsync_ReturnsAddedBookDetail_GivenNewBookDetail()
+        public async Task AddAsync_ReturnsAddedBookDetail_GivenNewBookDetail()
         {
             //Arrange
             var newBook = new Book() { Name = "All Findings", Price = 201 };

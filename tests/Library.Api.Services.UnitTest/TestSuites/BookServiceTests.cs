@@ -24,7 +24,7 @@ namespace Library.Api.Services.UnitTest.TestSuites
         }
 
         [Fact] 
-        public async void GetAllBooksAsync_ReturnsAllBooks()
+        public async Task GetAllBooksAsync_ReturnsAllBooks()
         {
             // Arrange
             var books = new List<Book>() {
@@ -42,7 +42,7 @@ namespace Library.Api.Services.UnitTest.TestSuites
         }
 
         [Fact]
-        public async void GetBookByIdAsync_GivenExistingBookId_ReturnBookDetail()
+        public async Task GetBookByIdAsync_GivenExistingBookId_ReturnBookDetail()
         {
             // Arrange
             var book =
@@ -60,7 +60,7 @@ namespace Library.Api.Services.UnitTest.TestSuites
 
 
         [Fact]
-        public async void AddBookAsync_GivenExistingBookId_ReturnBookCreated()
+        public async Task AddBookAsync_GivenExistingBookId_ReturnBookCreated()
         {
             // Arrange
             var bookDto = new BookDto() { Id = 1, Name = "Hamlet", Price = 200 };
@@ -80,7 +80,7 @@ namespace Library.Api.Services.UnitTest.TestSuites
         }
 
         [Fact]
-        public async void UpdateBookAsync_GivenExistingBook_ReturnUpdatedBook()
+        public async Task UpdateBookAsync_GivenExistingBook_ReturnUpdatedBook()
         {
             // Arrange
             var bookDto = new BookDto() { Id = 1, Name = "Hamlet", Price = 200 };

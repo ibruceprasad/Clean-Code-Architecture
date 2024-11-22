@@ -12,4 +12,4 @@ tests/Library.Api.Repository.UnitTest/obj
 tests/Library.Api.Repository.UnitTest/bin
 tests/Library.Api.Integration.Test/obj
 tests/Library.Api.Integration.Test/bin
-
+backend/Library.Api/.vs/

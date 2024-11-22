@@ -2,7 +2,7 @@ using FluentAssertions;
 using libraries.domain;
 using library.Services.Domain.Dtos;
 using library___api;
-using library___api.Models;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Testing;
 using System.Net.Http.Json;
 
@@ -12,6 +12,8 @@ namespace Library.Api.Integration.Test.IntegrationTests
     public class UpdateBookApiTest  // : IClassFixture<WebApplicationFactory<IApiMarker>>
     {
         private readonly HttpClient _httpClient;
+        private const string version = "v1";
+
         public UpdateBookApiTest(CustomWebApplicationFactory appFactory)
         {
             _httpClient = appFactory.CreateClient();
@@ -25,8 +27,8 @@ namespace Library.Api.Integration.Test.IntegrationTests
             var existingBookDetail = new BookDto(2, "Othello", 300);
             var bookDetailChanges = new BookDto(2, "Othello", 302);
             var id = 2;
-            var queryParams = $"?id={id}";
-            var uriWithQuery = $"/book{queryParams}";
+        
+            var uriWithQuery = $"{version}/book/{id}";
 
             // Act
 
@@ -48,8 +50,7 @@ namespace Library.Api.Integration.Test.IntegrationTests
             // Arrange
             var existingBookDetail = new BookDto(2, "Othello", 300);
             var id = 2;
-            var queryParams = $"?id={id}";
-            var uriWithQuery = $"/book{queryParams}";
+            var uriWithQuery = $"{version}/book/{id}";
             var bookDetailChanges = new BookDto(101, "Othello", 302);
 
             // Act
@@ -57,10 +58,10 @@ namespace Library.Api.Integration.Test.IntegrationTests
 
             // Assert
             response.StatusCode.Should().Be(System.Net.HttpStatusCode.NotFound);
-            var message = await response.Content.ReadFromJsonAsync<ErrorResponseMessage>();
+            var message = await response.Content.ReadFromJsonAsync<ProblemDetails>();
             message.Should().NotBeNull();
-            message.Should().BeOfType<ErrorResponseMessage>();
-            message.ErrorMessage.Should().NotBeNullOrEmpty();
+            message.Should().BeOfType<ProblemDetails>();
+            message.Detail.Should().NotBeNullOrEmpty();
         }
 
     }
