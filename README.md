@@ -26,7 +26,7 @@ This Web API project demonstrates Clean Code Architecture, implementing CRUD fun
 * Minimal API <br> 
 * API versioning <br>
 * automapper
-* OpenAPI Swashbuckle <br> 
+* OpenAPI Swashbuckle Spec- http://localhost:4000/swagger/v1/swagger.json  <br> 
 * Global Exception handler middleware <br>
 * Dependecy registration and injuction for service layer and repository layer <br>
 * Generic repository layer for CURD operation of entities<br>
