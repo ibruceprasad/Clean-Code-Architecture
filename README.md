@@ -1,7 +1,8 @@
 # librarymanagement
 
 ### <ins>About</ins>
-This Web API project demonstrates Clean Code Architecture, implementing CRUD functionality for book entities within a library management system.
+This Web API project demonstrates Clean Code Architecture, with application layer(api), service layer and repository layer. <br>
+This project developed a CRUD functionality for managing the book entity in a library management system.
 
 
 
