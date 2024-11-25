@@ -23,18 +23,17 @@ This project developed a CRUD functionality for managing the book entity in a li
 └── .gitignore<br>
 
 ### <ins>Technologies<ins>
-* .Net 8 Web Api,<br> 
-* Minimal API <br> 
-* API versioning <br>
-* automapper
-* OpenAPI Swashbuckle Spec- http://localhost:4000/swagger/v1/swagger.json  <br> 
-* Global Exception handler middleware <br>
-* Dependecy registration and injuction for service layer and repository layer <br>
-* Generic repository layer for CURD operation of entities<br>
-* Generic Result pattern(class -ServiceResult) in service layer to return results <br> 
-* Entity Framework Core <br> 
-* sqllite database <br>
-* xUnit mock tests for service layer and repository layer <br>
-* xUnit integration tests<br>
-* Integration test suite spin off MSSQL Docker container<br>
-* xUnit test results and coverage using coverlet
+1) .NET 8 Web API <br>
+2) Minimal API architecture<br>
+3) API versioning implementation<br>
+4) AutoMapper for object mapping<br>
+5) OpenAPI documentation with Swashbuckle (http://localhost:4000/swagger/v1/swagger.json)<br>
+6) Middleware for global exception handling<br>
+7) Dependency registration and injection for the service and repository layers<br>
+8) Generic repository pattern for CRUD operations on entities<br>
+9) Generic result pattern (ServiceResult class) in the service layer for consistent result handling<br>
+10) Entity Framework Core with SQLite database integration<br>
+11) Unit testing with xUnit, including mock tests and in-memory database tests<br>
+12) Integration testing with xUnit<br>
+13) MSSQL Docker container setup for running the integration test suite<br>
+14) Test result and coverage reporting using Coverlet with xUnit<br>
