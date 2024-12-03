@@ -22,7 +22,7 @@ This project developed a CRUD functionality for managing the book entity in a li
 └── README.md<br>
 └── .gitignore<br>
 
-### <ins>Technologies<ins>
+### <ins>API Technologies<ins>
 1) .NET 8 Web API <br>
 2) Minimal API architecture<br>
 3) API versioning implementation<br>
@@ -33,6 +33,8 @@ This project developed a CRUD functionality for managing the book entity in a li
 8) Generic repository pattern for CRUD operations on entities<br>
 9) Generic result pattern (ServiceResult class) in the service layer for consistent result handling<br>
 10) Entity Framework Core with SQLite database integration<br>
+<br>
+### <ins>Unit Tests & Integration Tests Technologies<ins>
 11) Unit testing with xUnit, including mock tests and in-memory database tests<br>
 12) Integration testing with xUnit<br>
 13) MSSQL Docker container setup for running the integration test suite<br>
