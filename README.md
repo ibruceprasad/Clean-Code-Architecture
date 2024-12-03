@@ -22,7 +22,7 @@ This project developed a CRUD functionality for managing the book entity in a li
 └── README.md<br>
 └── .gitignore<br>
 
-### <ins>API Technologies<ins>
+<ins>API Technologies<ins>
 1) .NET 8 Web API <br>
 2) Minimal API architecture<br>
 3) API versioning implementation<br>
