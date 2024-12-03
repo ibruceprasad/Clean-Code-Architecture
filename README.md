@@ -35,7 +35,7 @@ This project developed a CRUD functionality for managing the book entity in a li
 10) Entity Framework Core with SQLite database integration<br>
 <br>
 
-### Technologies for Unit Tests and Integration Tests
+###<ins> Technologies for Unit Tests and Integration Tests<ins>
 
 11) Unit testing with xUnit, including mock tests and in-memory database tests<br>
 12) Integration testing with xUnit<br>
