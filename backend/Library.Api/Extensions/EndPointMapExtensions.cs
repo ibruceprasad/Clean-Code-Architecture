@@ -21,12 +21,13 @@ namespace library___api.Extensions
             {
                 var booksDto = await bookServices.GetAllBooksAsync();
                 return Results.Ok(booksDto);
+                
             })
             .WithApiVersionSet(versionSet)
             .MapToApiVersion(1)
             .Produces(StatusCodes.Status200OK, typeof(List<BookDto>))
             .Produces(StatusCodes.Status500InternalServerError, typeof(ProblemDetails));
-            
+       
 
             app.MapGet("v{version:apiVersion}/book/{id}", async (int id, IBookServices bookServices) =>
             {

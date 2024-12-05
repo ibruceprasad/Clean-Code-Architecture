@@ -15,7 +15,7 @@ using System.Diagnostics;
 
 namespace Library.Api.Unit.Test.TestSuites
 {
-    // Note: Mocking of the Entry(entity) management is difficut using NSubStitute or Moq, hence go for inmemort test ???
+    // Note: Mocking of the Entry(entity) management is difficut using NSubStitute or Moq, hence go for inmemory test ???
     // _libraryDbContext.Set<T>().Entry(entity).State = EntityState.Modified; 
 
     public class BookRepository_NSubStitute_MockTests
